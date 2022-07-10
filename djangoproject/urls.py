@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from socialapp import views as v 
+from userapp import views as u
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', v.indexapp ),
+    path('home/', u.home ),
 ]
