@@ -22,10 +22,9 @@ from userapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('home/', u.home ),
+    path ('', views.login),
     path ('home/', views.home),
     path ('login/',views.login),
     path ('register/',views.register),
     path ('forget/',views.forgetpass),
-    
-    
 ]
