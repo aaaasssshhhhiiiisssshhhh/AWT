@@ -1,3 +1,4 @@
+from email import message
 from django.shortcuts import render,  HttpResponse
 
 from django.template import loader 
@@ -17,7 +18,8 @@ def doLogin(request):
         return render(request,"home.html",{})
         
     else:
-        return render (request,"login.html",{})
+        message = "plz enter correct information"
+        return render (request,"login.html",{'msg':message})
     
 def register(request):
     return render (request,"register.html",{})

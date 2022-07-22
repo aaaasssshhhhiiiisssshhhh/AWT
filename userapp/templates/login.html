@@ -30,16 +30,18 @@
                   <div class="card-header">
                     <h3 class="text-center font-weight-light my-4">Login</h3>
                   </div>
+
+                  <!-- Error Alert -->
                   {% if msg %}
-                  <div class="alert alert-danger alert-dismissible fade show">
-                    <h4>{{ msg }}</h4>
+                  <div class="alert alert-danger alert-danger fade show">
+                    {{msg}}
                     <button
                       type="button"
                       class="btn-close"
                       data-bs-dismiss="alert"
                     ></button>
                   </div>
-                  {% endif %}
+                  {%endif%}
                   <div class="card-body">
                     <form action="/doLogin/" method="POST" class="user">
                       {% csrf_token %}
