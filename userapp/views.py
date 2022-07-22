@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,  HttpResponse
+
+from django.template import loader 
+
+from .models import *
 
 # Create your views here.
 def login(request):
@@ -6,9 +10,9 @@ def login(request):
     return render (request,"login.html",{})
 
 def doLogin(request):
-    email = request.POST ['email']
-    password = request.POST ['password'] 
-    usrObj = User.objects.filter( email = "hari@gmail.com", password= "ram12").first()
+    email = request.POST['email']
+    password = request.POST['password'] 
+    usrObj = User.objects.filter( email = email, password= password).first()
     if usrObj:
         return render(request,"home.html",{})
         
