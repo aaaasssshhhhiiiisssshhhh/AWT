@@ -25,6 +25,7 @@ urlpatterns = [
     path ('', views.login),
     path ('home/', views.home),
     path ('login/',views.login),
+    path ('doLogin/', views.doLogin),
     path ('register/',views.register),
     path ('forget/',views.forgetpass),
 ]
